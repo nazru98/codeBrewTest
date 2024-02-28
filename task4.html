@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetching Data from API</title>
+</head>
+<body>
+    <script>
+        
+async function fetchProducts() {
+  let url = "https://jsonplaceholder.typicode.com/posts";
+  try {
+      const response = await fetch(url);  
+      if(response.status===200){
+        let jsonData= await response.json();
+        const slicedData = jsonData.slice(0, 5);
+        console.log(slicedData)
+      } else{
+       
+        console.log("URL is not Correct");
+      }
+   
+  } catch (error) {
+      console.log(error,'err');
+  }
+}
+
+fetchProducts()
+    </script>
+</body>
+</html>

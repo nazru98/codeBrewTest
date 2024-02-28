@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorted Array</title>
+
+</head>
+<body>
+   <script>
+    let alphabets = ["J","Z","D","Q","L","W","A","H","Y","K","G","N","V","R","P","X","C","M","F","O","U","S","I","E","T","B"];
+
+for (let i = 0; i < alphabets.length; i++) {
+    for (let j = 0; j < alphabets.length; j++) {
+        if (alphabets[i] < alphabets[j]) {
+            let tempElement = alphabets[j];
+            alphabets[j] = alphabets[i];
+            alphabets[i] = tempElement;
+        }
+    }
+}
+
+console.log("Output : ", alphabets);
+
+
+   </script> 
+</body>
+</html>

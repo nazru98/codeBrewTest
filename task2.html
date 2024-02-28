@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min and Max</title>
+</head>
+<body>
+    
+
+    <script>
+        let arrayOfNumber=[10,2,3,7,5,6,70];
+
+let largestNumber = arrayOfNumber[0];
+let shortestNumber = arrayOfNumber[0];
+
+for(let i = 1; i < arrayOfNumber.length; i++) {
+  if(largestNumber < arrayOfNumber[i]) {
+    largestNumber = arrayOfNumber[i];
+  }
+  if(shortestNumber > arrayOfNumber[i]) {
+    shortestNumber = arrayOfNumber[i];
+  }
+}
+
+console.log("Min is "+shortestNumber +" and Max is"+largestNumber);
+    </script>
+</body>
+</html>

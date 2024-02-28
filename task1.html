@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flat the Array</title>
+</head>
+<body>
+ <script>
+
+let arr1 = [1, 2, 3, [4, 5, 6, [9, 10]]];
+let flattArr = [];
+
+for (let elem1 of arr1) {
+    if (typeof elem1 === 'object') {
+        for (let subElem of elem1) {
+            if (typeof subElem === 'object') {
+                for (let subSubElem of subElem) {
+                    flattArr.push(subSubElem);
+                }
+            } else {
+                flattArr.push(subElem);
+            }
+        }
+    } else {
+        flattArr.push(elem1);
+    }
+}
+console.log(flattArr,'Arr');
+
+ </script>   
+</body>
+</html>
