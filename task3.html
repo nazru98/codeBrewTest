@@ -12,8 +12,8 @@
 
 for (let i = 0; i < alphabets.length; i++) {
     for (let j = 0; j < alphabets.length; j++) {
-        if (alphabets[i] < alphabets[j]) {
-            let tempElement = alphabets[j];
+        if (alphabets[i] < alphabets[j]) {  // Comparing the current element with other elements
+            let tempElement = alphabets[j]; //Swapping the Elements
             alphabets[j] = alphabets[i];
             alphabets[i] = tempElement;
         }

@@ -11,14 +11,14 @@
 async function fetchProducts() {
   let url = "https://jsonplaceholder.typicode.com/posts";
   try {
-      const response = await fetch(url);  
+      const response = await fetch(url);  //Fetching the Api
       if(response.status===200){
-        let jsonData= await response.json();
-        const slicedData = jsonData.slice(0, 5);
+        let jsonData= await response.json(); 
+        const slicedData = jsonData.slice(0, 5); //Slicing the array elements
         console.log(slicedData)
       } else{
        
-        console.log("URL is not Correct");
+        console.log("URL is not Correct");//displaying Error 
       }
    
   } catch (error) {

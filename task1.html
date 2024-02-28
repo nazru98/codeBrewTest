@@ -12,7 +12,7 @@ let arr1 = [1, 2, 3, [4, 5, 6, [9, 10]]];
 let flattArr = [];
 
 for (let elem1 of arr1) {
-    if (typeof elem1 === 'object') {
+    if (typeof elem1 === 'object') {// Checking the type of each element
         for (let subElem of elem1) {
             if (typeof subElem === 'object') {
                 for (let subSubElem of subElem) {
